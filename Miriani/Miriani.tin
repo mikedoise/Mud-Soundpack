@@ -8,8 +8,7 @@
 
 #ACTION {^The deck beneath you vibrates slightly as the relativity drive begins accelerating the starship through space.$}
 {
-	play General/Misc/Beep1.wav;
-	play Ship/Move/Accelerate.wav
+	play Ship/Move/Accelerate1.wav
 }
 {5}
 
@@ -27,7 +26,7 @@
 
 #ACTION {^The sounds of the relativity drive slowly cease as the starship comes to a halt.$}
 {
-	play Ship/Move/Decelerate.wav
+	play Ship/Move/Decelerate1.wav
 }
 {5}
 
@@ -72,6 +71,10 @@
 #ACTION {^You hear a low rumbling sound as the wormhole drive opens a wormhole.$}
 {
 	play Ship/Move/ftl.wav
+}
+#ACTION {^Precision Wormhole Drive is powering up %*}
+{
+	play Ship/Move/PreciseFTL.wav
 }
 {5}
 

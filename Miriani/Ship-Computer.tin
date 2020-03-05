@@ -129,7 +129,18 @@
 {
      play Ship/Computer/ScanRetrieved.wav
 }
-
+#ACTION {^Name %* # %* Units}
+{
+     play Ship/Computer/Display.wav;
+}
+#ACTION {^Charge Readout:} 
+{
+     play Ship/Computer/Display.wav;
+}
+#ACTION {^Objects %* Direction %* Lightyears %* Coordinates %*}
+{
+     play Ship/Computer/LRScan@rnd{4}.wav;
+}
 #ALIAS {g}
 {
      use survey

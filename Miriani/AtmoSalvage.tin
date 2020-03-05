@@ -157,7 +157,9 @@
 
 #ACTION {^Warning, avian lifeform in processing chamber. Expelling...$}
 {
-	play ACV/AvianExpulsion@rnd{38}.wav
+	play Atmo/SalvageLifeForm.wav;
+	play ACV/AvianExpulsion@rnd{38}.wav;
+	#line gag;
 }
 {5}
 
