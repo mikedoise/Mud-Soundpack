@@ -133,6 +133,14 @@
 {
      play Ship/Computer/Display.wav;
 }
+#ACTION {^There are no damaged components.} 
+{
+     play Ship/Computer/Display.wav;
+}
+#ACTION {^Starship Damage:}
+{
+     play Ship/Computer/Display.wav;
+}
 #ACTION {^Charge Readout:} 
 {
      play Ship/Computer/Display.wav;
