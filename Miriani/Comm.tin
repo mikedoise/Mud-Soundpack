@@ -35,7 +35,8 @@
 	#list {Buffer[@GetBufferNumber{General}][Messages]} ADD {%1};
 	UpdateBuffer Comm;
 	#list {Buffer[@GetBufferNumber{Comm}][Messages]} ADD {[General] %1};
-	#line gag
+	#line gag;
+	#showme {This line has been gagged.}
 }
 {5}
 
@@ -47,6 +48,16 @@
 	UpdateBuffer Comm;
 	#list {Buffer[@GetBufferNumber{Comm}][Messages]} ADD {[Short-range] %1}
 }
+
+#ACTION {^%* flight control scanner announce%*}
+{
+	play General/Comm/FlightScanner.wav;
+	play General/Comm/FlightScanner.wav
+	UpdateBuffer Sflight-control;
+	#list {Buffer[@GetBufferNumber{flight-control}][Messages]} ADD {%1};
+	UpdateBuffer Comm;
+	#list {Buffer[@GetBufferNumber{Comm}][Messages]} ADD {[flight-control] %1}
+}
 {5}
 
 #ACTION {^[Newbie]}
@@ -54,7 +65,10 @@
 	play General/Comm/Newbie.wav
 }
 {5}
-
+#ACTION {^[%?%?%?] %* transmits, %*}
+{
+	play General/Comm/org.wav;
+}
 #ACTION {^[{AIE|Commonwealth|Hale}}
 {
 	play General/Comm/alliance.wav
@@ -125,6 +139,7 @@
 	UpdateBuffer CM;
 	#list {Buffer[@GetBufferNumber{CM}][Messages]} ADD {%1};
 }
+
 {5}
 
 #SUBSTITUTE       {^You press a small button mounted on the wall and say, "%1"}                                         {%1}  {5}

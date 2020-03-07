@@ -163,7 +163,22 @@
      play Ship/Misc/Salvage@rnd{3}.wav;
      #line gag
 }
-
+#ACTION {%1 pieces of debris salvaged.}
+{
+     play Ship/Misc/Salvage@rnd{3}.wav;
+}
+#ACTION {%1 piece of debris salvaged} 
+{
+     play Ship/Misc/Salvage@rnd{3}.wav;
+}
+#ACTION {Salvage line energy emitters linked. Beginning salvage sweep...}
+{
+#line gag
+}
+#ACTION {You watch as the salvage lines slowly wind their way to what %*}
+{
+     #line gag
+}
 #ACTION {You hear a thunk as a video probe is launched.}
 {
      play Ship/Misc/VideoProbe.wav

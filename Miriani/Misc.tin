@@ -244,12 +244,26 @@
 {
      play prompt.wav
 }
-
+#ACTION {^[Type a line of input or `@abort' to abort the command.]}
+{
+     play prompt.wav
+}
 #ACTION {[Enter "yes" or "no"]}
 {
      play prompt.wav
 }
-
+#ACTION {^Input your selection:}
+{
+     play prompt.wav
+}
+#ACTION {^Enter your selection:} 
+{
+     play prompt.wav;
+}
+#ACTION {^Enter your selection or enter @abort to not purchase this item.} 
+{
+     play prompt.wav;
+}
 #ACTION {^A few sparks rise}
 {
      play Gneral/Misc/Fireplace.wav;
