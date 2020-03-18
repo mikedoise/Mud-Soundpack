@@ -32,7 +32,7 @@
 
 #ACTION {%1A %2 door to the %3 slides closed with a hiss%4}
 {
-     play Ship/Misc/DoorCloseStateroom.wav
+     play Ship/Misc/DoorClosedStateroom.wav
 }
 
 #ACTION {%1A %2 door to the %3 slides open with a hiss%4}

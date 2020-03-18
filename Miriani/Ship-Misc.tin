@@ -45,14 +45,30 @@
      play anchor end.wav;
      #line gag
 }
-
-#ACTION {%1the debris to be a lifeform%2}
+#ACTIOn {^, a lifeform%*} 
 {
      play Ship/Misc/lifeform.wav;
      #delay {1} {play SalvageLifeForm.wav};
      #line gag
 }
-
+#ACTION {^the debris to be a lifeform%2}
+{
+     play Ship/Misc/lifeform.wav;
+     #delay {1} {play SalvageLifeForm.wav};
+     #line gag
+}
+#ACTION {^%*and a lifeform%*}
+{
+     play Ship/Misc/lifeform.wav;
+     #delay {1} {play SalvageLifeForm.wav};
+     #line gag
+}
+#ACTION {^Scans reveal the debris to be a lifeform%*}
+{
+     play Ship/Misc/lifeform.wav;
+     #delay {1} {play SalvageLifeForm.wav};
+     #line gag
+}
 #ACTION {A heavy blast door suddenly moves aside%1}
 {
      play ship/misc/DoorOpen.wav
@@ -107,7 +123,7 @@
 
 #ACTION {You feel a mild vibration as the starship's asteroid anchor buries itself into the asteroid's surface.}
 {
-     play anchor start.wav;
+     play anchorstart.wav;
      #line gag
 }
 
