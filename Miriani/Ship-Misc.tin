@@ -27,7 +27,8 @@
 
 #ACTION {%1 pulls a small lever toward %2, deactivating the ship's systems.}
 {
-     play Ship/Misc/Lever@rnd{5}.wav
+     play Ship/Misc/Lever@rnd{5}.wav;
+     l;
 }
 
 #ACTION {%1 pushes a small lever away from %2, activating the ship's systems.}

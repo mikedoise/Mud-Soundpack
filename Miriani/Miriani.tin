@@ -14,7 +14,7 @@
 
 #ACTION {^The ship jerks slightly as its turrets are fired.$}
 {
-	play Ship/Combat/Laser1.wav
+	play Ship/Combat/Laser@rnd{17}.wav
 }
 {5}
 
@@ -92,19 +92,19 @@
 
 #ACTION {cannons are fired.$}
 {
-	play Ship/Combat/Cannon1.wav
+	play Ship/Combat/Cannon@rnd{10}.wav
 }
 {5}
 
 #ACTION {fired from the ship's cannons.$}
 {
-	play Ship/Combat/Cannon1.wav
+	play Ship/Combat/Cannon@rnd{10}.wav
 }
 {5}
 
 #ACTION {has a lock on this starship.$}
 {
-	play Ship/Combat/LockedOnYou.wav
+	play Ship/Combat/LockedOnYou2.wav
 }
 {5}
 
@@ -117,6 +117,45 @@
 #ACTION {has left the sector.}
 {
 	play Ship/Move/ExitSector1.wav
+}
+#ACTION {You spend a moment searching for a suitable location to deploy an asteroid anchor.}
+{
+	play General/Asteroid/AnchorStart.wav;
+	#line gag
+}
+#ACTION {Upon finding a suitable location, you press a small button on the side of an asteroid anchor, which forcefully buries itself into the ground.}
+{
+	play General/Asteroid/AnchorEnd.wav;
+	#line gag
+}
+#ACTION {You press a button on the side of an asteroid anchor, which works its way out of the ground. You pick it up.}
+{
+	play General/Asteroid/AnchorRemove.wav;
+	#line gag
+}
+#ACTION {You begin to painstakingly tie a coil of sturdy line to an asteroid anchor.}
+{
+	play General/Asteroid/LineStart.wav;
+	#line gag
+}
+#ACTION {You step back and admire your handiwork.}
+{
+	play General/Asteroid/LineEnd.wav;
+	#line gag
+}
+#ACTION {The whine of strained components echos throughout the area as the starship}
+{
+	play Ship/Move/Haul.wav;
+	#line gag
+}
+#ACTION {^for this asteroid. You will find your equipment at %*}
+{
+	play General/Asteroid/ShipAnchorEnd.wav;
+}
+#ACTION {A light envelops the room and quickly sucks your asteroid hauling supplies into an asteroid hauling kit.}
+{
+	play General/Asteroid/KitRetrieve.wav;
+	#line gag
 }
 {6}
 

@@ -306,6 +306,19 @@
      play General/Misc/Fire.wav;
      #line gag
 }
-
-
+#ACTION {You step on to a small platform on the floor. Sensing your presence, a ring of lights along the perimeter of the circle light up as the platform shoots upward.} 
+{
+     play General/Misc/HGLift.wav;
+     #line gag
+}
+#ACTION {You step on to a small platform on the floor. Sensing your presence, a ring of lights along the perimeter of the circle light up as the platform drops downward rapidly, holding your feet firmly in place.}
+{
+     play General/Misc/HGLift.wav;
+     #line gag
+}
+#ACTION {As the lift comes to a halt, the lights vanish and you step off.} 
+{
+     play General/Misc/HGLift.wav;
+     #line gag
+}
 #CLASS {Misc} CLOSE
