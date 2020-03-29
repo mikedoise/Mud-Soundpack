@@ -21,6 +21,14 @@
 			}
 		}
 	};
+	#elseif {"$environment[structure]"=="starship"&&@IsUnPoweredStarship{}}
+	{
+		#if {"$CurrentRoom"!="$NewRoom"}
+		{
+			#variable CurrentRoom $NewRoom;
+			PlayRoomSound Ship/Rooms/NoPower.wav
+		}
+	}
 	#else {
 		#variable CurrentRoom $NewRoom;
 	};
@@ -136,6 +144,17 @@
 #FUNCTION {IsPoweredStarship}
 {
 	#if {("$environment[type]" == "starship") && ("$environment[powered]" == "powered")}
+	{
+		#variable result 1
+	};
+	#else
+	{
+		#variable result 0
+	}
+}
+#FUNCTION {IsUnPoweredStarship}
+{
+	#if {("$environment[type]" == "starship") && ("$environment[powered]" == "unpowered")}
 	{
 		#variable result 1
 	};

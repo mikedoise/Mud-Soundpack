@@ -22,12 +22,16 @@
      #line gag
 }
 
-#ACTION {Target destroyed.$}
+#ACTION {^Target destroyed.$}
 {
-     play Ship/Combat/OtherDestroyed1.wav;
+     play Ship/Combat/OtherDestroyed@rnd{11}.wav;
      #variable {HC.WHits} @increment{${HC.WHits}}
 }
-
+#ACTION {^The computer reports that Praelor %* has been destroyed.} 
+{
+     play Ship/Combat/OtherDestroyed@rnd{11}.wav;
+     #variable {HC.WHits} @increment{${HC.WHits}}
+}
 #ACTION {Those coordinates are too far away to establish a lock.}
 {
      play Ship/Combat/OutOfRange.wav
@@ -54,13 +58,13 @@
 
 #ACTION {^A loud klaxon sounds as red lights continue to flash overhead.$}
 {
-     play Ship/Combat/RedCont2.wav;
+     play Ship/Combat/RedCont@rnd{3}.wav;
      #line gag
 }
 
 #ACTION {^A loud klaxon sounds as red lights flash overhead.$}
 {
-     play Ship/Combat/RedStart2.wav;
+     play Ship/Combat/RedStart@rnd{2}.wav;
      #line gag
 }
 
@@ -72,7 +76,7 @@
 
 #ACTION {^A loud, warbling alarm pierces the room as purple lights flash overhead.}
 {
-     play Ship/Combat/RedCont3.wav;
+     play Ship/Combat/RedCont@rnd{3}.wav;
      #line gag
 }
 
@@ -82,9 +86,9 @@
      #variable {HC.Misses} @increment{${HC.Misses}}
 }
 
-#ACTION {^Hit on}
+#ACTION {^Hit on %*}
 {
-     play Ship/Combat/OtherHit1.wav;
+     #delay {1} {play Ship/Combat/OtherHit@rnd{5}.wav};
      #variable {HC.WHits} @increment{${HC.WHits}}
 }
 
@@ -108,7 +112,7 @@
 
 #ACTION {^The room is filled with a brilliant %* light as the laser turrets are fired.$}
 {
-     play Ship/Combat/Laser1.wav
+     play Ship/Combat/Laser@rnd{17}.wav
 }
 
 #ACTION {^The ship rocks and shakes intensely as it is thrown violently by a push pulse.$}
@@ -130,14 +134,14 @@
 
 #ACTION {^This starship has been hit by}
 {
-     play Ship/Combat/YouHit1.wav;
+     play Ship/Combat/YouHit@rnd{11}.wav;
      #line gag;
      #variable {HC.ShipHits} @increment{${HC.ShipHits}}
 }
 
 #ACTION {^You feel a mighty shaking as something seemingly large impacts the hull.$}
 {
-     play Ship/Combat/YouHit@rnd{5}.wav;
+     play Ship/Combat/YouHit@rnd{17}.wav;
      #line gag
 }
 
