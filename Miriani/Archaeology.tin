@@ -48,9 +48,13 @@
 	play General/Archeaology/Soil.wav;
 	#line gag
 }
-#action {^You begin gently brushing dirt aside with a small brush.}
-{ play General/Archaeology/Brush@rnd{8}.wav;
-#line gag
+#ACTION {^You begin gently brushing dirt aside with a small brush.}
+{ 
+	play General/Archaeology/Brush@rnd{8}.wav;
+	#line gag
 }
-
+#ACTION {You suddenly feel more skilled in Archaeology!}
+{
+	play General/Archaeology/practice.wav
+}
 #CLASS {Archaeology} CLOSE
