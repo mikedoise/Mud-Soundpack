@@ -27,15 +27,14 @@
 }
 {4}
 
-#ACTION {^[General Communication] %*}
-{ 
-	#show [General] %1;
+#ACTION {[General Communication] %1}
+{
+	#show {[General] %1 };
 	play General/Comm/General.wav;
+	#line gag
 	UpdateBuffer General;
-	#list {Buffer[@GetBufferNumber{General}][Messages]} ADD {%1};
-	UpdateBuffer Comm;
-	#showme {This line has been gagged.}
 }
+
 {5}
 
 #ACTION {^[Short-range Communication] %*}

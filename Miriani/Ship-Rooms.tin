@@ -23,11 +23,10 @@
 	};
 	#elseif {"$environment[structure]"=="starship"&&@IsUnPoweredStarship{}}
 	{
-		#if {"$CurrentRoom"!="$NewRoom"}
-		{
-			#variable CurrentRoom $NewRoom;
-			PlayRoomSound Ship/Rooms/NoPower.wav
-		}
+		MuteRoomSounds
+		#variable CurrentRoom $NewRoom;
+		PlayRoomSound Ship/Rooms/NoPower.wav
+			
 	}
 	#else {
 		#variable CurrentRoom $NewRoom;

@@ -11,12 +11,16 @@
 #ACTION {^You press a small button mounted on the wall and %1}
 {
 	play Ship/Comm/pa@rnd{9}.wav;
-	#show [PA] You %1;#line gag
+	#show [PA] You %1;
+	#line gag
 }
 {5}
 
 #action {^%1's voice comes over the intercom, saying, "%2"}                              {#show [PA] %1 says, "%2";#line gag}  {5}
+{
+	play Ship/Comm/pa@rnd{9}.wav;
 
+}
 #action {%1 over the intercom.$} 
 {
 	#show [PA] %1;
@@ -25,8 +29,8 @@
 
 #action {%1 into a small microphone mounted on the wall.$} 
 {
-	#show [PA] %1;#
-	line gag
+	#show [PA] %1;
+	#line gag
 }
 
 #CLASS {Ship-Comm} CLOSE
